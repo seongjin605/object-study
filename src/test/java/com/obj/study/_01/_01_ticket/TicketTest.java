@@ -31,7 +31,7 @@ public class TicketTest {
     }
 
     @Test
-    public void 초대장이없는_관객을_입장() {
+    public void 초대장이없는_관객_입장() {
         Bag bagWithoutInvitation = new Bag(CASH);
         Audience audienceWithoutInvitation = new Audience(bagWithoutInvitation);
         this.theater.enter(audienceWithoutInvitation);
