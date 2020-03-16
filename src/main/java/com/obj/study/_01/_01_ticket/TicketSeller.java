@@ -8,6 +8,6 @@ public class TicketSeller {
     }
 
     public TicketOffice getTicketOffice() {
-        return this.ticketOffice;
+        return ticketOffice;
     }
 }
