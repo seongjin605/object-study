@@ -53,7 +53,7 @@ public class TicketSeller {
 public class Theater {
     public void enter(Audience audience) {
         ticketSeller.sellTo(audience);
-    }
+    }
 }
 ```
 변경을 했지만, TicketSeller는 Audience의 getBag() 메서드를 호출해서 Audience 내부의  
@@ -139,15 +139,15 @@ public class TicketSeller {
 
 
 
-연관된 작업만을 수행하고 연관성 없는 작업은 다른 객체에게 위임하는 객체를 가르켜 응집도(cohesion)이 높다고한다.  
+연관된 작업만을 수행하고 연관성 없는 작업은 다른 객체에게 위임하는 객체를 가르켜 **응집도(cohesion)** 가 높다고한다.  
 변경하기 쉬운 설계는 한 번에 하나의 클래스만 변경할 수 있는 설계이다.  
 또한, 하나의 변경으로인한 여파로 다른 여러 클래스에 에러가 전파되는 것을 억제해야한다.  
 
   
 
 
-레베카 워프스브록은 이처럼 능동적이고 자율적인 존재로 소프트웨어르 객체를 설계하는 원칙을 가르켜
-**의인화(anthropomorphism)**이라고 한다.
+레베카 워프스브록은 이처럼 능동적이고 자율적인 존재로 소프트웨어르 객체를 설계하는 원칙을 가르켜  
+**의인화(anthropomorphism)** 이라고 한다.
 
   
 
