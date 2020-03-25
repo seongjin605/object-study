@@ -1,4 +1,4 @@
-package com.obj.study._01._01_ticket;
+package com.obj.study._01._02_ticket;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -27,7 +27,7 @@ public class TicketTest {
         Bag bagWithInvitation = new Bag(new Invitation(), CASH);
         Audience audienceWithInvitation = new Audience(bagWithInvitation);
         this.theater.enter(audienceWithInvitation);
-        Assert.assertEquals(INIT_OFFICE_AMOUNT, this.ticketOffice.getAmount()); // 초대장으로 티켓을 교환한 것으로, 매표소의 잔고는 변화가 없어야
+        Assert.assertEquals(INIT_OFFICE_AMOUNT, this.ticketOffice.getAmount()); // 초대장으로 티켓을 교환한 것으로, 매표소의 잔고는 변화가 없어야 없어야한다.
     }
 
     @Test
@@ -35,6 +35,6 @@ public class TicketTest {
         Bag bagWithoutInvitation = new Bag(CASH);
         Audience audienceWithoutInvitation = new Audience(bagWithoutInvitation);
         this.theater.enter(audienceWithoutInvitation);
-        Assert.assertTrue(this.ticketOffice.getAmount() > INIT_OFFICE_AMOUNT); // 관객이 티켓을 직접 구매했으니, 매표소의 잔고는 올라갔을 것
+        Assert.assertTrue(this.ticketOffice.getAmount() > INIT_OFFICE_AMOUNT); // 관객이 티켓을 직접 구매했으니, 매표소의 잔고는 올라갔을 것이다.
     }
 }
