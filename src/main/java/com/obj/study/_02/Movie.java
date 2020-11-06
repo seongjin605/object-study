@@ -1,7 +1,11 @@
 package com.obj.study._02;
 
+
+import lombok.Getter;
+
 import java.time.Duration;
 
+@Getter
 public class Movie {
     private String title;
     private Duration runningTime;
