@@ -1,4 +1,4 @@
-package com.obj.study._01._02_ticket;
+    package com.obj.study._01._02_ticket;
 
 import com.obj.study._02.*;
 import org.junit.Assert;
@@ -32,5 +32,15 @@ public class MovieTest {
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(20, 59))));
 
         Assert.assertEquals("타이타닉", titanic.getTitle());
+    }
+
+    @Test
+    public void 할인되지않는_영화_생성() {
+        Movie startWras = new Movie("스타워즈",
+                Duration.ofMinutes(210),
+                Money.wons(10000),
+                new NoneDiscountPolicy());
+
+        Assert.assertEquals("스타워즈", startWras.getTitle());
     }
 }
