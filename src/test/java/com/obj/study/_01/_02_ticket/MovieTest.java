@@ -1,4 +1,4 @@
-    package com.obj.study._01._02_ticket;
+package com.obj.study._01._02_ticket;
 
 import com.obj.study._02.*;
 import org.junit.Assert;
@@ -36,11 +36,13 @@ public class MovieTest {
 
     @Test
     public void 할인되지않는_영화_생성() {
-        Movie startWras = new Movie("스타워즈",
+        Movie starWars = new Movie("스타워즈",
                 Duration.ofMinutes(210),
                 Money.wons(10000),
                 new NoneDiscountPolicy());
 
-        Assert.assertEquals("스타워즈", startWras.getTitle());
+        Assert.assertEquals("스타워즈", starWars.getTitle());
+        Assert.assertTrue(starWars.getFee().isEqual(Money.wons(10000)));
+
     }
 }
