@@ -22,6 +22,7 @@ public class MovieTest {
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(20, 59))));
 
         Assert.assertEquals("아바타", avatar.getTitle());
+        Assert.assertTrue(avatar.getFee().isEqual(Money.wons(10000)));
 
         Movie titanic = new Movie("타이타닉",
                 Duration.ofMinutes(180),
@@ -32,6 +33,7 @@ public class MovieTest {
                         new PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(20, 59))));
 
         Assert.assertEquals("타이타닉", titanic.getTitle());
+        Assert.assertTrue(titanic.getFee().isEqual(Money.wons(11000)));
     }
 
     @Test
@@ -43,6 +45,5 @@ public class MovieTest {
 
         Assert.assertEquals("스타워즈", starWars.getTitle());
         Assert.assertTrue(starWars.getFee().isEqual(Money.wons(10000)));
-
     }
 }
