@@ -11,7 +11,7 @@ import java.time.LocalTime;
 public class MovieTest {
 
     @Test
-    public void 영화명_테스트() {
+    public void 할인_영화_생성() {
         Movie avatar = new Movie("아바타",
                 Duration.ofMinutes(120),
                 Money.wons(10000),
